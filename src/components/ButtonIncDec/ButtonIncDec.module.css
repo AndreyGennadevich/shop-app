@@ -1,0 +1,36 @@
+.btnWrapper {
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.btn {
+    padding: 5px 10px;
+    color: var(--white);
+    background: var(--blue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn svg {
+    height: 8px;
+}
+
+@media screen and (max-width: 800px) {
+    .btnWrapper {
+        height: auto;
+        flex-direction: row;
+    }
+
+    .btn {
+        width: 35px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .btnWrapper {
+        width: 150px;
+    }
+}

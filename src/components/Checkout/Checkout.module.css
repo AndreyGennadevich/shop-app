@@ -1,0 +1,38 @@
+.checkoutWrapper {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+    justify-items: right;
+}
+
+.totalCost {
+    align-self: end;
+    background: var(--white);
+    margin-right: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--blue);
+}
+
+.button {
+    border: none;
+    color: var(--white);
+    background: var(--blue);
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 400px) {
+    .checkoutWrapper {
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+
+    .button {
+        grid-column: span 2;
+        grid-row: 2;
+    }
+}
