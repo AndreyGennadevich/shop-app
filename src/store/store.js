@@ -4,7 +4,7 @@ import {cartReducer} from "./cartStore";
 
 const preloadedState = localStorage.getItem('reduxState')
     ? JSON.parse(localStorage.getItem('reduxState'))
-    : {}
+    : {};
 
 export const store = configureStore({
     reducer: {

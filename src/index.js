@@ -15,16 +15,16 @@ ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/' element={<Layout />}>
-                        <Route index element={<Navigate to="products" />}/>
-                        <Route path='products' element={<ProductsPage />}/>
-                        <Route path='cart' element={<CartPage />}/>
+                    <Route path='/' element={<Layout/>}>
+                        <Route index element={<Navigate to="products"/>}/>
+                        <Route path='products' element={<ProductsPage/>}/>
+                        <Route path='cart' element={<CartPage/>}/>
                         <Route path="*" element={<NotFound/>}/>
                     </Route>
                 </Routes>
             </BrowserRouter>
         </React.StrictMode>
     </Provider>,
-  document.getElementById('root')
+    document.getElementById('root')
 );
 

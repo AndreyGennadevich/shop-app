@@ -1,9 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
 
 const initialState = {
     counter: 0,
     items: [],
-}
+};
 
 export const counterSlice = createSlice({
     name: 'counter',
@@ -51,8 +51,8 @@ export const counterSlice = createSlice({
             }
         },
     },
-})
+});
 
-export const { increment, decrement, addToCart, removeFromCart, changeAmount } = counterSlice.actions
+export const {increment, decrement, addToCart, removeFromCart, changeAmount} = counterSlice.actions;
 
-export const cartReducer = counterSlice.reducer
+export const cartReducer = counterSlice.reducer;

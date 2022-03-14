@@ -2,7 +2,7 @@ import styles from './ProductsList.module.css';
 import {priceRu} from "../../helpers/helpers";
 import {Loading, OrderButton} from "../../components";
 import {Link} from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux'
+import {useSelector, useDispatch} from 'react-redux'
 import {addToCart} from "../../store/cartStore";
 import {useGetProductsQuery} from "../../services/ProductsService";
 
@@ -13,7 +13,7 @@ export const ProductsList = () => {
     const cartItems = useSelector((state) => state.cart.items);
 
     const checkInCart = (id) => {
-          return cartItems.findIndex(p => p.id === id);
+        return cartItems.findIndex(p => p.id === id);
     };
 
     return (
@@ -27,7 +27,8 @@ export const ProductsList = () => {
                         <span className={styles.itemTitle}>{i.name}</span>
                         <div className={styles.priceWrapper}>
                             <span>{priceRu(i.price)}</span>
-                            {checkInCart(i.id) >= 0 ? <Link className={'button'} to='/cart'>Оформить заказ</Link> : <OrderButton id={i.id} addToCart={() => dispatch(addToCart(i))}/>}
+                            {checkInCart(i.id) >= 0 ? <Link className={'button'} to='/cart'>Оформить заказ</Link> :
+                                <OrderButton id={i.id} addToCart={() => dispatch(addToCart(i))}/>}
                         </div>
                     </li>
                 ))}

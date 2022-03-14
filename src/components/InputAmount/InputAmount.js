@@ -17,7 +17,7 @@ export const InputAmount = ({value, id}) => {
 
     const handleChangeInput = (event) => {
         if (event.target.value.length <= 3) {
-            setInputValue(event.target.value.replace (/\D/, ''));
+            setInputValue(event.target.value.replace(/\D/, ''));
         }
     };
 

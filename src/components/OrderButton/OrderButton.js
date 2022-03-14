@@ -3,7 +3,7 @@ import cn from "classnames";
 
 export const OrderButton = ({addToCart}) => {
     return (
-        <button className={ cn(styles.button, 'button')} onClick={addToCart}>
+        <button className={cn(styles.button, 'button')} onClick={addToCart}>
             Добавить в корзину
         </button>
     );
